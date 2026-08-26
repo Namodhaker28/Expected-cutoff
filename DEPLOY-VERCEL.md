@@ -16,7 +16,9 @@ Browser → your-app.vercel.app/api/*  → Express backend
 3. Set **Framework Preset** to **Services** (important!)
 4. Root directory: `./` (repo root)
 
-Vercel reads [`vercel.json`](vercel.json) at the repo root.
+Vercel reads [`vercel.json`](vercel.json) at the repo root. It uses the **Services** format with `"type": "service"` in rewrites.
+
+> **Note:** Vercel may suggest `/api/backend` as the backend path. We use `/api/:path*` instead because Express routes are already defined as `/api/exams`, `/api/health`, etc. — matching the frontend's `NEXT_PUBLIC_API_URL=/api`.
 
 ---
 
