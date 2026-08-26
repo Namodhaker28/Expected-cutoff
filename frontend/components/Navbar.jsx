@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import Logo from '@/components/Logo';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -24,12 +25,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-bold text-lg bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent"
-        >
-          Expected Cutoff
-        </Link>
+        <Logo />
         <div className="flex items-center gap-3 sm:gap-4">
           {isHome && (
             <a

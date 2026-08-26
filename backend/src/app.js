@@ -17,6 +17,7 @@ const corsOptions = {
       process.env.FRONTEND_URL,
       'http://localhost:3000',
       'http://127.0.0.1:3000',
+      'https://expected-cutoff.vercel.app',
     ].filter(Boolean);
     const isAllowed =
       allowed.includes(origin) ||
@@ -31,14 +32,21 @@ app.use(express.json());
 app.set('trust proxy', 1);
 
 let dbPromise = null;
+let dbConnectedLogged = false;
 
 function connectDB() {
   if (mongoose.connection.readyState >= 1) {
     return Promise.resolve();
   }
   if (!dbPromise) {
-    const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/expected-cutoff';
-    dbPromise = mongoose.connect(uri);
+    const uri = process.env.MONGODB_URI;
+    dbPromise = mongoose.connect(uri).then(() => {
+      if (!dbConnectedLogged) {
+        const { host, name } = mongoose.connection;
+        console.log(`MongoDB connected successfully `);
+        dbConnectedLogged = true;
+      }
+    });
   }
   return dbPromise;
 }
@@ -69,3 +77,4 @@ app.use('/api/auth', authRoutes);
 app.use('/api/user', authRoutes);
 
 module.exports = app;
+module.exports.connectDB = connectDB;

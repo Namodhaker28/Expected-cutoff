@@ -72,16 +72,10 @@ expectedCutoff = 30% crowd data + 40% historical trend + 30% structural factors
 - Weighted moving average on historical cutoffs
 - Seat & applicant density adjustments
 
-## Deploy to production
+## Local development
 
-### All-in-one on Vercel (recommended)
+Run backend and frontend in separate terminals (see **Setup** above), or from the repo root with Vercel CLI:
 
-Deploy **frontend + backend together** on one Vercel project: **[DEPLOY-VERCEL.md](DEPLOY-VERCEL.md)**
-
-### Split deploy (Render + Vercel)
-
-- **Backend:** [Render](https://render.com) — see [`render.yaml`](render.yaml)
-- **Frontend:** [Vercel](https://vercel.com) — root directory `frontend`
-- **Database:** [MongoDB Atlas](https://www.mongodb.com/atlas) (free tier)
-
-Full guide: **[DEPLOY.md](DEPLOY.md)**
+```bash
+vercel dev
+```
