@@ -10,7 +10,11 @@ export default async function sitemap() {
 
   const staticRoutes = [
     { url: absoluteUrl('/'), changeFrequency: 'daily', priority: 1 },
+    { url: absoluteUrl('/about'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: absoluteUrl('/contact'), changeFrequency: 'monthly', priority: 0.7 },
     { url: absoluteUrl('/exams/add'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: absoluteUrl('/privacy'), changeFrequency: 'yearly', priority: 0.4 },
+    { url: absoluteUrl('/terms'), changeFrequency: 'yearly', priority: 0.4 },
     { url: absoluteUrl('/login'), changeFrequency: 'yearly', priority: 0.3 },
   ];
 

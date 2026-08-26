@@ -19,6 +19,8 @@ export const siteConfig = {
   locale: 'en_IN',
   twitterHandle: null,
   creator: 'Expected Cutoff',
+  contactEmail: 'hello@expectedcutoff.com',
+  foundedYear: 2025,
 };
 
 export function getSiteUrl() {

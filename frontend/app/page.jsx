@@ -6,7 +6,6 @@ import { getExams } from '@/lib/api/client';
 import Hero from '@/components/home/Hero';
 import HowItWorks from '@/components/home/HowItWorks';
 import ExamCard from '@/components/ExamCard';
-import Footer from '@/components/Footer';
 
 const POPULAR_SLUGS = ['jee-main', 'neet', 'gate', 'cat', 'ssc-cgl'];
 
@@ -148,8 +147,6 @@ export default function HomePage() {
             </div>
           )}
         </section>
-
-        <Footer />
       </div>
     </div>
   );

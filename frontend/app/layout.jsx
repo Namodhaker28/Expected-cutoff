@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 import { siteConfig, getSiteUrl } from '@/lib/site';
 
@@ -55,6 +56,9 @@ export const metadata = {
     shortcut: '/logo-mark.svg',
   },
   manifest: '/manifest.webmanifest',
+  verification: {
+    google: 'AS5hCZWuWYdLCxNV5mbDY9gFolN0JbqPaOiidb1BkDU',
+  },
   other: {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-title': siteConfig.shortName,
@@ -74,11 +78,12 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en-IN">
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <JsonLd />
         <AuthProvider>
           <Navbar />
-          {children}
+          <main className="flex-1">{children}</main>
+          <Footer />
         </AuthProvider>
       </body>
     </html>
