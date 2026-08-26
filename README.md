@@ -74,8 +74,14 @@ expectedCutoff = 30% crowd data + 40% historical trend + 30% structural factors
 
 ## Deploy to production
 
+### All-in-one on Vercel (recommended)
+
+Deploy **frontend + backend together** on one Vercel project: **[DEPLOY-VERCEL.md](DEPLOY-VERCEL.md)**
+
+### Split deploy (Render + Vercel)
+
 - **Backend:** [Render](https://render.com) — see [`render.yaml`](render.yaml)
 - **Frontend:** [Vercel](https://vercel.com) — root directory `frontend`
 - **Database:** [MongoDB Atlas](https://www.mongodb.com/atlas) (free tier)
 
-Full step-by-step guide: **[DEPLOY.md](DEPLOY.md)**
+Full guide: **[DEPLOY.md](DEPLOY.md)**

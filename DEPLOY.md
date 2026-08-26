@@ -22,16 +22,22 @@ Browser → Vercel (Next.js) → /api/* rewrite → Render (Express) → MongoDB
 
 ## Step 2 — Push code to GitHub
 
-If not already on GitHub:
-
-```bash
-git init -b main
-git add -A
-git commit -m "Initial commit"
-gh repo create Expected-cutoff --public --source=. --push
-```
+Repo: **https://github.com/Namodhaker28/Expected-cutoff**
 
 ---
+
+## Quick deploy (one-click Render)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Namodhaker28/Expected-cutoff)
+
+After clicking:
+1. Connect GitHub account **Namodhaker28**
+2. Set env vars when prompted: `MONGODB_URI`, `GEMINI_API_KEY`
+3. Deploy → open **Shell** → run `npm run seed`
+
+---
+
+## Step 2 (alt) — Already on GitHub
 
 ## Step 3 — Deploy backend on Render
 
@@ -71,8 +77,11 @@ gh repo create Expected-cutoff --public --source=. --push
 
 ## Step 4 — Deploy frontend on Vercel
 
-1. Go to [vercel.com/new](https://vercel.com/new) → import your GitHub repo.
-2. Configure:
+### Option A — Vercel Dashboard (recommended for personal account)
+
+1. Run `vercel login` in terminal and sign in with your **personal** account.
+2. Go to [vercel.com/new](https://vercel.com/new) → import **`Namodhaker28/Expected-cutoff`**
+3. Configure:
 
    | Setting | Value |
    |---------|--------|
@@ -90,7 +99,16 @@ gh repo create Expected-cutoff --public --source=. --push
 
 5. Copy your Vercel URL, e.g. `https://expected-cutoff.vercel.app`.
 
-6. Go back to **Render** → set `FRONTEND_URL` to your Vercel URL → redeploy backend (optional, for direct API calls).
+### Option B — CLI script
+
+```bash
+vercel login   # personal account
+export RENDER_API_URL=https://YOUR-API.onrender.com/api
+chmod +x scripts/deploy-vercel.sh
+./scripts/deploy-vercel.sh
+```
+
+6. Go back to **Render** → set `FRONTEND_URL` to your Vercel URL → redeploy backend.
 
 ---
 
