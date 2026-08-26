@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  @apply text-slate-900 antialiased;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/45 backdrop-blur-xl border border-white/60 shadow-lg shadow-indigo-200/20;
+  }
+
+  .glass-strong {
+    @apply bg-white/60 backdrop-blur-2xl border border-white/70 shadow-xl shadow-indigo-200/25;
+  }
+
+  .glass-subtle {
+    @apply bg-white/30 backdrop-blur-lg border border-white/50 shadow-md shadow-indigo-100/20;
+  }
+
+  .landing-gradient {
+    @apply bg-gradient-to-br from-indigo-100 via-violet-50 to-sky-100;
+  }
+}

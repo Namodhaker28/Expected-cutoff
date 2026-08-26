@@ -1,0 +1,42 @@
+{
+  "slug": "cuet-ug",
+  "name": "CUET UG",
+  "categories": ["General", "OBC", "SC", "ST", "EWS"],
+  "subjects": ["Language", "Domain Subject", "General Test"],
+  "maxScore": 800,
+  "description": "Common University Entrance Test for undergraduate admissions",
+  "history": [
+    { "year": 2022, "category": "General", "closingRank": 50000, "closingScore": 650 },
+    { "year": 2023, "category": "General", "closingRank": 55000, "closingScore": 660 },
+    { "year": 2024, "category": "General", "closingRank": 58000, "closingScore": 670 },
+    { "year": 2025, "category": "General", "closingRank": 60000, "closingScore": 680 },
+    { "year": 2022, "category": "OBC", "closingRank": 80000, "closingScore": 580 },
+    { "year": 2023, "category": "OBC", "closingRank": 85000, "closingScore": 590 },
+    { "year": 2024, "category": "OBC", "closingRank": 88000, "closingScore": 600 },
+    { "year": 2025, "category": "OBC", "closingRank": 90000, "closingScore": 610 },
+    { "year": 2022, "category": "SC", "closingRank": 150000, "closingScore": 480 },
+    { "year": 2023, "category": "SC", "closingRank": 155000, "closingScore": 490 },
+    { "year": 2024, "category": "SC", "closingRank": 160000, "closingScore": 500 },
+    { "year": 2025, "category": "SC", "closingRank": 165000, "closingScore": 510 },
+    { "year": 2022, "category": "ST", "closingRank": 200000, "closingScore": 420 },
+    { "year": 2023, "category": "ST", "closingRank": 205000, "closingScore": 430 },
+    { "year": 2024, "category": "ST", "closingRank": 210000, "closingScore": 440 },
+    { "year": 2025, "category": "ST", "closingRank": 215000, "closingScore": 450 },
+    { "year": 2022, "category": "EWS", "closingRank": 65000, "closingScore": 620 },
+    { "year": 2023, "category": "EWS", "closingRank": 68000, "closingScore": 630 },
+    { "year": 2024, "category": "EWS", "closingRank": 70000, "closingScore": 640 },
+    { "year": 2025, "category": "EWS", "closingRank": 72000, "closingScore": 650 }
+  ],
+  "seats": [
+    { "year": 2025, "category": "General", "totalSeats": 200000, "registeredApplicants": 1300000, "appearedApplicants": 1200000 },
+    { "year": 2026, "category": "General", "totalSeats": 210000, "registeredApplicants": 1350000, "appearedApplicants": 1250000 },
+    { "year": 2025, "category": "OBC", "totalSeats": 100000, "registeredApplicants": 500000, "appearedApplicants": 460000 },
+    { "year": 2026, "category": "OBC", "totalSeats": 105000, "registeredApplicants": 520000, "appearedApplicants": 480000 },
+    { "year": 2025, "category": "SC", "totalSeats": 55000, "registeredApplicants": 280000, "appearedApplicants": 260000 },
+    { "year": 2026, "category": "SC", "totalSeats": 57000, "registeredApplicants": 290000, "appearedApplicants": 270000 },
+    { "year": 2025, "category": "ST", "totalSeats": 28000, "registeredApplicants": 140000, "appearedApplicants": 130000 },
+    { "year": 2026, "category": "ST", "totalSeats": 29000, "registeredApplicants": 145000, "appearedApplicants": 135000 },
+    { "year": 2025, "category": "EWS", "totalSeats": 40000, "registeredApplicants": 200000, "appearedApplicants": 185000 },
+    { "year": 2026, "category": "EWS", "totalSeats": 42000, "registeredApplicants": 210000, "appearedApplicants": 195000 }
+  ]
+}
