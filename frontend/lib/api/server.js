@@ -15,7 +15,11 @@ async function safeFetch(path) {
       next: { revalidate: 3600 },
     });
     if (!res.ok) return null;
-    return res.json();
+
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) return null;
+
+    return await res.json();
   } catch {
     return null;
   }

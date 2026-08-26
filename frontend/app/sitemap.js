@@ -1,6 +1,9 @@
 import { absoluteUrl, getSiteUrl } from '@/lib/site';
 import { fetchExams } from '@/lib/api/server';
 
+// Generate at request time — API isn't available during Vercel frontend build
+export const dynamic = 'force-dynamic';
+
 export default async function sitemap() {
   const baseUrl = getSiteUrl();
   const exams = await fetchExams();
